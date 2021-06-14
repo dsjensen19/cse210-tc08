@@ -27,10 +27,10 @@ def main(screen):
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y - (constants.MAX_Y / 2) )
     position = Point(x, y)
-    Side_paddles = Actor()
-    Side_paddles.set_text("|\n|\n|\n|")
-    Side_paddles.set_position(position)
-    cast["Side_paddles"] = [Side_paddles]
+    Side_Paddle = Actor()
+    Side_Paddle.set_text("\n|\n|\n|\n|")
+    Side_Paddle.set_position(position)
+    cast["Side_Paddle"] = [Side_Paddle]
 
     cast["brick"] = []
     for x in range(5, 75):
