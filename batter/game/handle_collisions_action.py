@@ -15,11 +15,11 @@ class HandleCollisionsAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
-        marquee = cast["marquee"][0] # there's only one
+        #marquee = cast["marquee"][0] # there's only one
         ball = cast["ball"][0] # there's only one
         bricks = cast["brick"]
-        marquee.set_text("")
+        #marquee.set_text("")
         for brick in bricks:
             if ball.get_position().equals(brick.get_position()):
                 description = brick.get_description()
-                marquee.set_text(description) 
+                #marquee.set_text(description) 

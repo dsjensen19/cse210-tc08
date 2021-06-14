@@ -10,7 +10,7 @@ Batter is a game in which the player seeks to bat the ball back towards the top 
 Batter is played according to the following rules.
 
 1. The bricks are arranged in 4 rows and 70 columns at the top of the screen.
-2. The bat (or paddle) is positioned near the bottom of the screen.
+2. The bat (or Bottom_Paddle) is positioned near the bottom of the screen.
 3. The player can move the bat left or right within the boundaries of the screen.
 4. The ball moves of its own accord, bouncing off the bat, bricks and walls.
 If the bat misses the ball the game is over.
