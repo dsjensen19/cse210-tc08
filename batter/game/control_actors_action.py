@@ -28,4 +28,8 @@ class ControlActorsAction(Action):
         """
         direction = self._input_service.get_direction()
         ball = cast["ball"][0] # there's only one in the cast
-        ball.set_velocity(direction)        
+        ball.set_velocity() 
+        directionBP = self._input_service.get_direction()
+        directionBP = cast["Bottom_Paddle"][1] # there's only one in the cast
+        Bottom_Paddle.set_velocity(directionBP) 
+        directionSP = self._input_service.get_direction()
