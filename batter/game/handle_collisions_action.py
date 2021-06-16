@@ -27,15 +27,15 @@ class HandleCollisionsAction(Action):
         point = Point(0,0)
         for brick in bricks:
             if ball.get_position().equals(brick.get_position()):
-                x2 = actor._velocity.get_x()
-                y2 = actor._velocity.get_y()
-                ball.set_velocity((x2 * 1, y2 * -1))
+                x2 = ball._velocity.get_x()
+                y2 = ball._velocity.get_y()
+                ball.set_velocity(Point(x2 * 1, y2 * -1))
                 #marquee.set_text(description) 
             elif ball.get_position().equals(Bottom_Paddle.get_position()):
-                x2 = actor._velocity.get_x()
-                y2 = actor._velocity.get_y()
-                ball.set_velocity((x2 * 1, y2 * -1))
+                x2 = ball._velocity.get_x()
+                y2 = ball._velocity.get_y()
+                ball.set_velocity(Point(x2 * 1, y2 * -1))
             elif ball.get_position().equals(Side_Paddle.get_position()):
-                x2 = actor._velocity.get_x()
-                y2 = actor._velocity.get_y()
-                ball.set_velocity((x2 * -1, y2 * 1))
+                x2 = ball._velocity.get_x()
+                y2 = ball._velocity.get_y()
+                ball.set_velocity(Point(x2 * -1, y2 * 1))
