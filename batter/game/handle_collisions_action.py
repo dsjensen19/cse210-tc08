@@ -19,7 +19,7 @@ class HandleCollisionsAction(Action):
         """
         #marquee = cast["marquee"][0] # there's only one
         ball = cast["ball"][0] # there's only one
-        Side_Paddle = cast["Side_Paddle"][0]
+        #Side_Paddle = cast["Side_Paddle"][0]
         Bottom_Paddle = cast["Bottom_Paddle"][0]
         bricks = cast["brick"]
         #marquee.set_text("")
