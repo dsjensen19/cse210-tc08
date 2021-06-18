@@ -31,11 +31,11 @@ class HandleCollisionsAction(Action):
                 y2 = ball._velocity.get_y()
                 ball.set_velocity(Point(x2 * 1, y2 * -1))
                 #marquee.set_text(description) 
-            if ball.get_position().inbetween(Bottom_Paddle.get_position(), 10):
+        if ball.get_position().inbetween(Bottom_Paddle.get_position(), 10):
                 x2 = ball._velocity.get_x()
                 y2 = ball._velocity.get_y()
                 ball.set_velocity(Point(x2 * 1, y2 * -1))
-            if ball.get_position().inbetween(Side_Paddle.get_position(), 5):
+        if ball.get_position().inbetween(Side_Paddle.get_position(), 5):
                 x2 = ball._velocity.get_x()
                 y2 = ball._velocity.get_y()
                 ball.set_velocity(Point(x2 * -1, y2 * 1))
