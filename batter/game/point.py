@@ -32,7 +32,7 @@ class Point:
         y = self._y + other.get_y()
         return Point(x, y)
 
-    def inbetween(self, other, num):
+    def inbetween_X(self, other, num):
         """Whether or not this Point is equal to the given one.
 
         Args:
@@ -45,6 +45,19 @@ class Point:
         #and self._x <= (other.get_x() + num)
         return self._x >= other.get_x() and self._x <= (other.get_x() + num) and self._y == other.get_y()
 
+    def inbetween_Y(self, other, num):
+        """Whether or not this Point is equal to the given one.
+
+        Args:
+            self (Point): An instance of Point.
+            other (Point): The Point to compare.
+
+        Returns: 
+            boolean: True if both x and y are equal; false if otherwise.
+        """
+        #and self._x <= (other.get_x() + num)
+        return self._y >= other.get_y() and self._y <= (other.get_y() + num) and self._x == other.get_x()
+        
     def equals(self, other):
         """Whether or not this Point is equal to the given one.
 
