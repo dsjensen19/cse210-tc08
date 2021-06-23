@@ -35,16 +35,28 @@ class HandleCollisionsAction(Action):
 
                 #marquee.set_text(description)
             i +=1 
+            """
+        bottom_left_point = Point(0,0)
+        bottom_right_point = Point(constants.MAX_X, 0)
         if ball.get_position().inbetween_X(Bottom_Paddle.get_position(), 10):
             x2 = ball._velocity.get_x()
             y2 = ball._velocity.get_y()
             ball.set_velocity(Point(x2 * 1, y2 * -1))
 
-        if ball.get_position().inbetween_X(point(0,-1), constants.MAX_X):
+        if ball.get_position().inbetween_X(bottom_left_point, constants.MAX_X):
             x2 = ball._velocity.get_x()
             y2 = ball._velocity.get_y()
+
             #end game
-        if ball.get_position().inbetween_Y(point(0, 0), constants.MAX_y):
+        
+        #Walls
+        if ball.get_position().inbetween_Y(bottom_left_point, constants.MAX_Y):
             x2 = ball._velocity.get_x()
             y2 = ball._velocity.get_y()
             ball.set_velocity(Point(x2 * -1, y2 * 1))
+        
+        if ball.get_position().inbetween_Y(bottom_right_point, constants.MAX_Y):
+            x2 = ball._velocity.get_x()
+            y2 = ball._velocity.get_y()
+            ball.set_velocity(Point(x2 * -1, y2 * 1))
+            """
