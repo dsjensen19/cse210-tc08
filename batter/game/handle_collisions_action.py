@@ -3,6 +3,7 @@ from game import constants
 from game.action import Action
 from game.actor import Actor
 from game.point import Point
+from game.director import Director
 
 class HandleCollisionsAction(Action):
     """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
@@ -24,6 +25,7 @@ class HandleCollisionsAction(Action):
         bricks = cast["brick"]
         #marquee.set_text("")
         actor= Actor()
+        director = Director
         point = Point(0,0)
         i = 0
         for brick in bricks:
@@ -35,28 +37,28 @@ class HandleCollisionsAction(Action):
 
                 #marquee.set_text(description)
             i +=1 
-            """
-        bottom_left_point = Point(0,0)
-        bottom_right_point = Point(constants.MAX_X, 0)
+            
+        bottom_left_point = Point(1,0)
+        bottom_right_point = Point(constants.MAX_X-1, 0)
+        top_left_point = Point(1,constants.MAX_Y - 1)
         if ball.get_position().inbetween_X(Bottom_Paddle.get_position(), 10):
             x2 = ball._velocity.get_x()
             y2 = ball._velocity.get_y()
-            ball.set_velocity(Point(x2 * 1, y2 * -1))
+            ball.set_velocity(Point(x2 , y2 * -1))
 
-        if ball.get_position().inbetween_X(bottom_left_point, constants.MAX_X):
-            x2 = ball._velocity.get_x()
-            y2 = ball._velocity.get_y()
-
-            #end game
+        if ball.get_position().inbetween_X(top_left_point, constants.MAX_X):
+            ball.set_velocity(Point(0, 0 ))
+            import sys
+            sys.exit()
+            print("game over")
         
         #Walls
         if ball.get_position().inbetween_Y(bottom_left_point, constants.MAX_Y):
             x2 = ball._velocity.get_x()
             y2 = ball._velocity.get_y()
-            ball.set_velocity(Point(x2 * -1, y2 * 1))
+            ball.set_velocity(Point(x2 * -1, y2 ))
         
         if ball.get_position().inbetween_Y(bottom_right_point, constants.MAX_Y):
             x2 = ball._velocity.get_x()
             y2 = ball._velocity.get_y()
-            ball.set_velocity(Point(x2 * -1, y2 * 1))
-            """
+            ball.set_velocity(Point(x2 * -1, y2 ))

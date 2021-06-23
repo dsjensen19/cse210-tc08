@@ -32,4 +32,3 @@ class ControlActorsAction(Action):
         directionBP = self._input_service.get_direction()
         Bottom_Paddle = cast["Bottom_Paddle"][0] # there's only one in the cast
         Bottom_Paddle.set_velocity(directionBP) 
-        directionSP = self._input_service.get_direction()
