@@ -81,4 +81,8 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # TODO: Add your names and emails here
+______________________________________________________
+
+              CLASSES AND ASSINGMENTS
+______________________________________________________
+AUTHOR NAMES: Tyson Brost, Derek Jensen, Seth Burton, Chris Patrinovich
